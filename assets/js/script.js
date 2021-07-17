@@ -70,6 +70,16 @@ jQuery(function ($) {
 	/*	animation scroll js
 	/* ========================================================================= */
 
+
+
+	function myFunction(x) {
+		if (x.matches) {
+			var topOf = 50
+		} else {
+			var topOf = 350
+		}
+	}
+
 	var html_body = $('html, body');
 	$('nav a, .page-scroll').on('click', function () { //use page-scroll class in any HTML tag for scrolling
 		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {

@@ -2,6 +2,7 @@
 baseURL = "https://examplesite.com"
 title = "Meghna"
 theme = "meghna-hugo"
+themesDir = "../.."
 # post pagination
 paginate = "6"
 # post excerpt
@@ -40,53 +41,94 @@ link = "plugins/lazy-load/lozad.min.js"
 [[params.plugins.js]]
 link = "plugins/google-map/map.js"
 
-############################# Navigation ##################################
-[[menu.main]]
+################### English Navigation ########################
+[[Languages.en.menu.main]]
 name = "about"
-URL = "about"
+url = "#about"
 weight = 1
 
-[[menu.main]]
+[[Languages.en.menu.main]]
 name = "services"
-URL = "services"
+url = "#services"
 weight = 2
 
-[[menu.main]]
+[[Languages.en.menu.main]]
 name = "portfolio"
-URL = "portfolio"
+url = "#portfolio"
 weight = 3
 
-[[menu.main]]
+[[Languages.en.menu.main]]
 name = "team"
-URL = "team"
+url = "#team"
 weight = 4
 
-[[menu.main]]
+[[Languages.en.menu.main]]
 name = "pricing"
-URL = "pricing"
+url = "#pricing"
 weight = 5
 
-[[menu.main]]
+[[Languages.en.menu.main]]
 name = "blog"
-URL = "blog"
+url = "#blog"
 weight = 6
 
-[[menu.main]]
+[[Languages.en.menu.main]]
 name = "contact"
-URL = "contact"
+url = "#contact"
 weight = 7
 
-#### external / static link ####
-[[menu.static]]
+[[Languages.en.menu.main]]
 name = "themefisher"
-URL = "https://themefisher.com/"
+url = "https://themefisher.com/"
+weight = 8
+
+
+################### French Navigation ########################
+[[Languages.fr.menu.main]]
+name = "sur"
+url = "#about"
+weight = 1
+
+[[Languages.fr.menu.main]]
+name = "un service"
+url = "#services"
+weight = 2
+
+[[Languages.fr.menu.main]]
+name = "portefeuille"
+url = "#portfolio"
+weight = 3
+
+[[Languages.fr.menu.main]]
+name = "équipe"
+url = "#team"
+weight = 4
+
+[[Languages.fr.menu.main]]
+name = "tarification"
+url = "#pricing"
+weight = 5
+
+[[Languages.fr.menu.main]]
+name = "blog"
+url = "#blog"
+weight = 6
+
+[[Languages.fr.menu.main]]
+name = "contact"
+url = "#contact"
+weight = 7
+
+[[Languages.fr.menu.main]]
+name = "themefisher"
+url = "https://themefisher.com/"
 weight = 8
 
 ############################# Default Parameters ##########################
 [params]
 logo = "images/logo.png"
 # Meta data
-description = "Responsive Multipurpose Parallax HTML5 Template"
+description = "Responsive Multipurpose Parallax Hugo Template"
 author = "Themefisher"
 # Google Analytics
 google_analytics_id = "" # Your ID
@@ -95,12 +137,17 @@ post_share = true
 
 # preloader
 [params.preloader]
-enable = true
+enable = false
 preloader = "images/logo.png"
+
+# cookies
+[params.cookies]
+enable = false
+expire_days = 2
 
 # google map
 [params.map]
-enable = true
+enable = false
 gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
 map_latitude = "51.5223477"
 map_longitude = "-0.1622023"
